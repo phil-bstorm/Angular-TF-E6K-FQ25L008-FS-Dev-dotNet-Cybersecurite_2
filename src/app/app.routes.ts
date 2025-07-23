@@ -25,4 +25,11 @@ export const routes: Routes = [
         './features/demos/pages/demo2-binding/demo2-binding.component'
       ).then((c) => c.Demo2BindingComponent),
   },
+  {
+    path: 'demo/3',
+    loadComponent: () =>
+      import('./features/demos/pages/demo3-pipes/demo3-pipes.component').then(
+        (c) => c.Demo3PipesComponent
+      ),
+  },
 ];

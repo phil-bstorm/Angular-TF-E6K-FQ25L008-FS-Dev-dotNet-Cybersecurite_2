@@ -1,1 +1,31 @@
-<p>demo2-binding works!</p>
+<h2>Démo sur les bindinds</h2>
+
+<h3>Interpolation</h3>
+<p>Un string: {{ helloWorld }}</p>
+<p>Un number : {{ PI }}</p>
+<p>Une date: {{ date }}</p>
+<p>Un tableau: {{ tableau }}</p>
+<p>Un bool : {{ booleen }}</p>
+<p>Un null: {{ unNull }}</p>
+<p>Un undefined: {{ unUndefined }}</p>
+<p>Un objet: {{ objet }}</p>
+<p>Un objet (avec pipe): {{ objet | json }}</p>
+<p>Propriéte prenom de l'objet: {{ objet.prenom }}</p>
+<p>Un calcule: {{ 2 + 2 }}</p>
+
+<h3>Two way bindings</h3>
+<p>
+  Input pour modifier la variable 'helloWorld' (⚠️ ne pas oublier l'import de
+  `FormsModule`)
+</p>
+<input type="text" [(ngModel)]="helloWorld" />
+
+<h3>Property binding</h3>
+
+<button>Je suis actif!</button>
+<button [disabled]="buttonIsDisabled">Je ne suis pas actif!</button>
+
+<h3>Event binding</h3>
+
+<button [disabled]="buttonIsDisabled" (click)="btnClicked()">+</button>
+<button [disabled]="!buttonIsDisabled" (click)="btnClicked()">!</button>

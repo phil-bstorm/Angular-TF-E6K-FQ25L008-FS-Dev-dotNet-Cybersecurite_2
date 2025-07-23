@@ -1,0 +1,35 @@
+<h2>Les pipes</h2>
+
+<h3>Pipe intégrés</h3>
+<p>
+  Il existe de nombreuse pipe intégrées à Angular. Voici quelques exemples :
+</p>
+<ul>
+  <li>uppercase : {{ "hello world" | uppercase }}</li>
+  <li>lowercase : {{ "HELLO WORLD" | lowercase }}</li>
+  <li>titlecase : {{ "hello world" | titlecase }}</li>
+  <li>date : {{ uneDate | date }}</li>
+  <li>date short : {{ uneDate | date : "short" }}</li>
+  <li>date shortDate: {{ uneDate | date : "shortDate" }}</li>
+  <li>date shortTime: {{ uneDate | date : "shortTime" }}</li>
+  <li>date medium: {{ uneDate | date : "medium" }}</li>
+  <li>date avec format: {{ uneDate | date : "dd/MM/yyyy" }}</li>
+  <li>currency : {{ 100 | currency }}</li>
+  <li>currency : {{ 100 | currency : "EUR" }}</li>
+  <li>nombre : {{ 0.533 | number }}</li>
+  <li>percent : {{ 0.533 | percent }}</li>
+  <li>nombre avec minimum de chiffre affiché : {{ 0.533 | number : "2.2" }}</li>
+  <li>
+    nombre float maximum après la virgule : {{ 0.533 | number : "0.0-2" }}
+  </li>
+  <li>
+    nombre avec minimum de chiffre affiché et séparateur de millier :
+    {{ 1000 | number : "2.2-2" }}
+  </li>
+  <li>json : {{ { name: "John", age: 30 } | json }}</li>
+  <li>slice (hello world, de 1 à 7): {{ "hello world" | slice : 1 : 7 }}</li>
+</ul>
+
+<h3>Pipe custom</h3>
+<input type="text" [(ngModel)]="username" />
+<p>{{ username | reverseText }}</p>
