@@ -3,10 +3,15 @@ import { HomeComponent } from './features/home/home.component';
 
 export const routes: Routes = [
   {
+    // "path" = URL apres le nom de domaine (domaine "http://localhost:4200")
     path: '',
+    // "component" = composant qui sera affiché
     component: HomeComponent,
   },
   {
+    // "path" = URL apres le nom de domaine (domaine "http://localhost:4200" + le path "/demo")
+    // "loadComponent" = chargement du composant de manière paresseuse (lazy loading)
+    // pour optimiser le chargement de l'application (Component vs loadComponent : loadComponent n'est chargé que lorsque la page est demandée)
     path: 'demo',
     loadComponent: () =>
       import('./features/demos/pages/demo-home/demo-home.component').then(
