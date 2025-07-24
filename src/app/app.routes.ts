@@ -32,4 +32,13 @@ export const routes: Routes = [
         (c) => c.Demo3PipesComponent
       ),
   },
+
+  // Path EXOS:
+  {
+    path: 'exo/1',
+    loadComponent: () =>
+      import('./features/exercises/pages/exo-chrono/exo-chrono.component').then(
+        (c) => c.ExoChronoComponent
+      ),
+  },
 ];

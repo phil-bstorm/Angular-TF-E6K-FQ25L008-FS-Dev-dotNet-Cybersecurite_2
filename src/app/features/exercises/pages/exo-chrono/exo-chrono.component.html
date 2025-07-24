@@ -1,0 +1,7 @@
+<h2>Exercice chrono</h2>
+
+<p>{{ nbSeconds | chronoFormat }}</p>
+
+<button (click)="onStart()" [disabled]="isChronoRunning">Start</button>
+<button (click)="onStop()" [disabled]="!isChronoRunning">Stop</button>
+<button (click)="onReset()">Reset</button>
